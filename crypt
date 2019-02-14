@@ -1,0 +1,8 @@
+#!/usr/local/bin/bash
+
+for letter in {a..z} 
+do
+  AscValue=`printf "%d\n" "'$letter'"`
+  let "m = $AscValue + 3"
+  echo $m | awk '{printf("%c\n",'$m')}'
+done
